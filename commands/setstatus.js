@@ -4,6 +4,9 @@ const config = require('../config.json')
   let online = 0x4ee075;
   let idle = 0xddc318;
   let dnd = 0xdd1717;
+  if(args.length === 0) return m.channel.send("Please include something to set as your status as!");
+if(message.content.includes("clear")) return client.user.setGame("online"), message.channel.send("Status has been cleared!");
+client.user.setStatus(`${args}`);
   let embed = new Discord.RichEmbed()
   
   .setAuthor(message.guild, client.user.displayAvatarURL)

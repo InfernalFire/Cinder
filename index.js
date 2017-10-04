@@ -5,20 +5,6 @@ const fs = require("fs");
 let points = JSON.parse(fs.readFileSync("./points.json", "utf8"));
 const config = require("./config.json");
 
-if (!points[message.author.id]) points[message.author.id] = {
-    points: 0,
-    level: 0.
-  };
-  let userData = points[message.author.id];
-  userData.points++;
-
-  let curLevel = Math.floor(0.1 * Math.sqrt(userData.points));
-  if (curLevel > userData.level) {
-    // Level up!
-    userData.level = curLevel;
-    message.reply(`You"ve leveled up to level **${curLevel}**! Ain"t that dandy?`);
-}
-
 // This loop reads the /events/ folder and attaches each event file to the appropriate event.
 fs.readdir("./events/", (err, files) => {
   if (err) return console.error(err);
@@ -45,9 +31,6 @@ client.on("message", message => {
   } catch (err) {
     console.error(err);
   }
-  fs.writeFile("./points.json", JSON.stringify(points), (err) => {
-    if (err) console.error(err)
   });
-});
 
 client.login(config.token);

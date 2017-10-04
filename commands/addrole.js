@@ -2,7 +2,7 @@ const Discord = require('discord.js')
 exports.run = (client, message, args) => {
   let role = message.mentions.roles.first()
   let member = message.mentions.members.first() || message.member
-  let user = message.mentions.users.first() message.author
+  let user = message.mentions.users.first()
   let modlog = message.guild.channels.find('name', 'mod-log')
   if(!modlog) return message.reply(`Please create a channel named 'mod-log'`)
   if(!role) return message.reply('Please include a role')

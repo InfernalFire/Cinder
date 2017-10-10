@@ -9,3 +9,13 @@ exports.run = (client, message,args) => {
 
 
 }
+
+exports.conf = {
+  aliases: []
+}
+
+exports.help = {
+  name: "setrolecolor",
+  description: "sets the color of the role",
+  usage: "setrolecolor <hexcolor>"
+}

@@ -18,5 +18,5 @@ exports.conf = {
 exports.help = {
   name: "setrolehoist",
   description: "allows you to enable/disable role hoist",
-  usage: "setrolehoist <true/false>
+  usage: "setrolehoist <true/false>"
 }

@@ -6,5 +6,14 @@ exports.run = (client, message, args) => {
  .then(updated => message.channel.send(`Updated guild AFK channel to ${guild.afkChannel}`))
  .catch(console.error);
 
+}
 
+exports.conf = {
+  aliases: []
+}
+
+exports.help = {
+  name: "setafkchannel",
+  description: "sets the new afk channel",
+  usage: "setafkchannel"
 }

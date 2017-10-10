@@ -1,6 +1,6 @@
 const Discord = require('discord.js')
 exports.run = (client, message,args) => {
-  let content = message.content.split(' ')[1]
+  let content = message.content.slice(' ')[2]
   let role = message.mentions.roles.first()
   
   role.setColor(content)

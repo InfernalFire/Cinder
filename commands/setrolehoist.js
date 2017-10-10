@@ -1,7 +1,7 @@
 const Discord = require('discord.js')
 exports.run = (client, message, args) => {
   let role = message.mentions.roles.first()
-  let content = message.content.slice(' ')[1]
+  let content = message.content.slice(' ')[2]
 
   role.setHoist(content)
   // content must be true or false

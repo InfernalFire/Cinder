@@ -8,3 +8,11 @@ exports.run = (client, message, args) => {
 
 
 }
+exports.conf = {
+  aliases: []
+}
+exports.help = {
+  name: "setrolementionable",
+  description: "enables/disables role mentionability",
+  usage: "setrolementionable <true/false>"
+}

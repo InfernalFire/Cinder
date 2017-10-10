@@ -9,3 +9,14 @@ exports.run = (client, message, args) => {
   .catch(console.error)
 
 }
+
+exports.conf = {
+  aliases: []
+  
+}
+
+exports.help = {
+  name: "setrolehoist",
+  description: "allows you to enable/disable role hoist",
+  usage: "setrolehoist <true/false>
+}
